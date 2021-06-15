@@ -1,37 +1,41 @@
 package com.company;
 
-public class Cricle {
-    private double radius;
-    private String color;
-    private boolean filled;
+public class Cricle extends Shape {
+    private double radius = 1.0;
+
     public Cricle() {
     }
-    public Cricle(double radius){
+
+    public Cricle(double radius) {
         this.radius = radius;
     }
-    public Cricle(double radius, String color, boolean filled){
+
+    public Cricle(double radius, String color, boolean filled) {
+        super(color, filled);
         this.radius = radius;
-        this.color = color;
-        this.filled = filled;
     }
-    public double getRadius(){
-        return this.radius;
+
+    public double getRadius() {
+        return radius;
     }
-    public String getColor(){
-        return this.color;
-    }
-    public boolean isFilled(){
-        return this.filled;
-    }
+
     public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public void setFilled(boolean filled) {
-        this.filled = filled;
+    public double getArea() {
+        return radius * radius * Math.PI;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public double getPerimeter() {
+        return 2 * radius * Math.PI;
+    }
+
+    @Override
+    public String toString() {
+        return "A Circle with radius="
+                + getRadius()
+                + ", which is a subclass of "
+                + super.toString();
     }
 }

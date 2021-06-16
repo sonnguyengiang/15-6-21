@@ -1,7 +1,7 @@
 package com.company;
 
 public class Cricle extends Shape {
-    private double radius = 1.0;
+    private double radius;
 
     public Cricle() {
     }

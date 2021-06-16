@@ -1,8 +1,8 @@
 package com.company;
 
 public class Shape {
-    private String color = "green";
-    private boolean filled = true;
+    private String color;
+    private boolean filled;
 
     public Shape() {
     }

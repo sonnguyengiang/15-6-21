@@ -11,9 +11,9 @@ public class ComparableCircle extends Cricle implements Comparable<ComparableCir
         super(radius, color, filled);
     }
     @Override
-    public int compareTo(ComparableCircle o){
-        if (getRadius() > o.getRadius()) return 1;
-        else if (getRadius() < o.getRadius()) return -1;
+    public int compareTo(ComparableCircle a){
+        if (getRadius() > a.getRadius()) return 1;
+        else if (getRadius() < a.getRadius()) return -1;
         else return 1;
     }
 }
